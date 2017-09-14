@@ -10,8 +10,8 @@ export default class Timer extends Component {
       action: null,
       interval: null,
       timeRemaining: null,
-      breakLength: 1000*10,
-      workLength: 1000*25
+      breakLength: this.props.breakLength * 1000 * 60,
+      workLength: this.props.workLength * 1000 * 60
     }
     this.baseState = this.state
   }
@@ -87,6 +87,7 @@ export default class Timer extends Component {
   }
 
   handleReset() {
+    this.props.reset()
     clearInterval(this.state.interval)
     document.getElementById('clock').innerHTML = ""
     document.getElementById('message').innerHTML = "Let's get to work"

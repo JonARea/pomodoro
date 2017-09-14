@@ -1,3 +1,7 @@
 .btn {
   margin: 10px;
 }
+
+#clock {
+  font-size: 60px;
+}
