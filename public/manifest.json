@@ -1,11 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "My Pomodoro",
+  "name": "My Pomodoro",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "tomato.jpeg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ],
   "start_url": "./index.html",
