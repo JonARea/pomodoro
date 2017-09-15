@@ -17,6 +17,6 @@
     "eject": "react-scripts eject"
   },
   "engines": {
-    "node": 
+    "node": "8.2.1"
   }
 }
