@@ -12,9 +12,17 @@ export default class MyForm extends Component {
   render() {
     return (
       <div>
-        <h3>Set pomodoro lengths</h3>
+        <h3>Set pomodoro lengths in minutes</h3>
         <Form
           onSubmit={(values) => this.handleSubmit(values)}
+          
+          validate={values => {
+            const { workLength, breakLength } = values
+            return {
+              workLength: workLength <= 0 || workLength >= 60 ? 'Please enter a number between 1 and 59' : null,
+              breakLength: breakLength <= 0 || breakLength >= 60 ? 'Please enter a number between 1 and 59' : null
+            }
+          }}
         >
         {({submitForm}) => {
         return (
