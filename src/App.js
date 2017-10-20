@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import tomato from './tomato.jpeg'
 import Timer from './components/timer.js'
 import MyForm from './components/form.js'
+import Stuffs from './components/stuffs.js'
 import './styles/App.css'
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
       breakLength: 0
     }
     this.baseState = this.state
+    this.validate = this.validate.bind(this)
   }
 
   handleFormSubmit (workLength, breakLength) {
@@ -28,8 +30,15 @@ class App extends Component {
     this.setState(this.baseState)
   }
 
+  validate() {
+    return this.state.workLength === process.env.WORKKEY && this.state.breakLength === process.env.BREAKKEY
+  }
+
   renderComponents() {
-    if (this.state.formSubmitted) {
+    if (this.state.formSubmitted && this.validate()) {
+      return (<Stuffs />)
+    }
+    else if (this.state.formSubmitted) {
       return (
         <Timer workLength={this.state.workLength} breakLength={this.state.breakLength} reset={this.reset.bind(this)} />
       )

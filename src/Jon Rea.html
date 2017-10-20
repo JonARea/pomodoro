@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="shortcut icon" href="http://localhost:3000/gongedit_RgM_icon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Jon Rea</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none;
+  font-variant: small-caps;
+  color: aliceblue;
+}
+a:hover {
+  text-decoration: underline;
+}
+</style><style type="text/css">.box {
+  height: 80px;
+  width: 150px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#253030), to(#152020));
+  background: -webkit-linear-gradient(#253030, #152020);
+  background: -o-linear-gradient(#253030, #152020);
+  background: linear-gradient(#253030, #152020);
+  color: aliceblue;
+  list-style: none;
+  padding: 8px;
+  text-align: center;
+  font-variant-caps: small-caps;
+  border: solid thin #444;
+  border-radius: 5px;
+}
+
+.box:hover {
+  border-color: white !important;
+}
+.clicked-box {
+  background: black;
+}
+
+.nav > li {
+  height: 80px;
+  width: 150px;
+  background-color: black;
+  list-style: none;
+  float: left;
+  padding: 10px;
+  margin: 0 10px 0 10px;
+  border-radius: 5px;
+}
+</style><style type="text/css">.navigation {
+  min-height: 150px;
+  background-image: url(/static/media/motif-batik-Sidomukti-solo.b3af1799.jpg);
+  border-bottom: 7px solid black;
+  text-align: center;
+}
+
+.navbar {
+  display: inline-block;
+  padding: 0 40px 0 0;
+}
+</style><style type="text/css">.content-detail {
+  text-align: center;
+  padding: 20px 50px 10px 50px;
+  min-height: 400px;
+  color: aliceblue;
+  background-color: #152020;
+}
+
+.content-detail > div {
+  display: inline-block;
+  width: 40%;
+}
+</style><style type="text/css">
+
+.App-logo {
+  margin-left: -85px;
+  height: 100px;
+  display: inline-block;
+}
+
+.App-header {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#253030), to(#152020));
+  background: -webkit-linear-gradient(#253030, #152020);
+  background: -o-linear-gradient(#253030, #152020);
+  background: linear-gradient(#253030, #152020);
+  height: 160px;
+  color: aliceblue;
+  border-bottom: 7px solid black;
+}
+
+#facebook {
+    float: left;
+    display: inline;
+    margin: 10px 0 0 10px;
+    height: 30px;
+    width: 30px;
+    padding: 0 0 5px 5px;
+}
+
+#github {
+    float: left;
+    display: inline;
+    margin: 10px 0 0 10px;
+    height: 30px;
+    width: 30px;
+    padding: 0 0 5px 5px;
+}
+</style><style type="text/css">.link {
+  font-size: 20px;
+  text-decoration: none;
+  font-variant: small-caps;
+  color: aliceblue;
+}
+
+.link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.project_list {
+  list-style: none;
+}
+</style><style type="text/css">
+.btn {
+  height: 40px;
+  width: 120px;
+  margin: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(grey));
+  background: -webkit-linear-gradient(white, grey);
+  background: -o-linear-gradient(white, grey);
+  background: linear-gradient(white, grey);
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.quote {
+  font-style: italic;
+}
+</style><style type="text/css">.weather .local-weather .fetchWeather {
+  height: 100%;
+  width: 100%;
+  color: black;
+}
+</style></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div data-reactroot=""><div class="App-header"><a id="facebooklink" href="https://web.facebook.com/jon.rea.7946" class="nav-link"><img id="facebook" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAYFBMVEU7WZj///9AXZorTpIzU5WWo8Rne6xIYp3s7/bi5u5CX5vw8vauuNE1VZba3+o4V5ePnbzCyt20vdScqMNWb6ImS5NLZ55rf627w9jS2OUQP4uJmb13irWirsgeRo73+PsOYSWnAAACL0lEQVRoge3biY6CMBAG4OmhUpZSORXP93/LBRPXo4Mi0HY3Oz+JBgW/YJAOgwBjTBVl7C9loVoTGMtBaDDtdHm4Tg8zr977eEZA0rl51b7oN1XCQHHvbLvtKRTCPwtyDaUO4JoaeAC2SxiXk0suueTex5jrc++QM7trpJAaeBxz3n6ylqKLPQTM6xqxk4cka1TURimVNk22zY+L0truOV0plpcSxk5ujbXzuUaU2ReqMpa4c6VOzj2qS7fa9KsOXbF/xTpzT/tXqjNXLF+zjlxdRkFckb1h3bjy8I514poKP0a5dgdsrhu3CeLquu+g7NYVA75mF+5p22NFKv1JIWd38b05XZRc38VabaprVtixKteV7Kqra+z1JrtLZCDa7t62EKa62K83GtC5mOoKZATcWnuRA3dtu4sBHZPJ7sJ2Dz62F3E3gdwlueSSS+4vdCtv7uohgB2f+eopM9Q58aVncgtSbnxFT0l3M7gDyuXnNIHc/BTGPdoFiBd3b+/gPtzzZo79eYSLXKLy4UYru5724TbIiYoPN0PqaR9uXoVxsfMHH+4hkIuNix7ccz3HeffnroIwboOdln7s8kY9BGlvPC6g7CbSGBe6C0O3SKzOgfslYrTr4KGuQ5sdf7WOJZdccskll1xyySWXXHLJJZdccsn9ry5MvD9lpGvqiffjjHTlGtQUdrSbAkuQNrxjtzp295clBvkDujtXS3m83NfG0qLkI/O+L2qlXqftQt9BNywSbb/tDgAAAABJRU5ErkJggg==" alt="My facebook page"></a><a id="githublink" href="https://github.com/JonARea" class="nav-link"><img id="github" src="data:image/png;base64,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" alt="My Github page"></a><img src="Jon%20Rea_files/gongedit.jpg" class="App-logo" alt="logo"><h2>Jon Rea</h2></div><div class="container-fluid navigation"><nav class="navbar"><ul class="nav navbar-nav"><li><div class="box"><h2>homepage</h2></div></li><li><div class="box"><h2>writings</h2></div></li><li><div class="box"><h2>projects</h2></div></li></ul></nav></div><div class="container-fluid detail_view"><div class="content-detail" style="background-color: aliceblue; color: black;"><div class="weather"><button class="btn btn-primary">Get your local weather</button><div class="local-weather"></div><h3 style="font-style: italic;">OR</h3><form><input name="citySearch" placeholder="Search for weather from any city here" type="text"></form><div class="fetchWeather"></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+  <script type="text/javascript" src="Jon%20Rea_files/bundle.js"></script>
+
+</body></html>
